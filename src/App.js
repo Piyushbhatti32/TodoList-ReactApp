@@ -8,7 +8,7 @@ import About from "./Components/About";
 import Edit from "./Components/edit";
 import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   let initialTodos;

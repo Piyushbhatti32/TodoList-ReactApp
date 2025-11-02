@@ -61,7 +61,7 @@ const Addtodo = (props) => {
       <h2 className="text-center mt-2">Add Todo</h2>
       <Form
         onSubmit={onSubmit}
-        className="m-3 bg-light p-3 border rounded shadow w-50"
+        className="m-3 bg-light p-3 border rounded shadow w-100"
       >
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Todo Title</Form.Label>
