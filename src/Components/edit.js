@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 
-function Edit({ todo: initialTodo, onEdit }) {
+function Edit({ todo: initialTodo, onEdit, onOpen, className }) {
   const [show, setShow] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [todo, setTodo] = useState(initialTodo || {
@@ -24,7 +24,10 @@ function Edit({ todo: initialTodo, onEdit }) {
     setShowAlert(false);
   };
 
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    if (typeof onOpen === 'function') onOpen();
+    setShow(true);
+  };
 
   const handleSubmit = () => {
     if (!todo.title || !todo.desc) {
@@ -37,7 +40,7 @@ function Edit({ todo: initialTodo, onEdit }) {
 
   return (
     <>
-      <Button variant="warning" className="btn-sm" onClick={handleShow}>
+      <Button variant="warning" className={`btn-sm ${className || ''}`} onClick={handleShow}>
         Edit
       </Button>
 

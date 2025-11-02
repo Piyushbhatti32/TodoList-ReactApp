@@ -23,7 +23,7 @@ function Header({ title, searchBar }) {
           <Nav
             className="me-auto my-2 my-lg-0 h"
             variant="underline"
-            style={{ maxHeight: "100px" }}
+            style={{ maxHeight: "150px" }}
             navbarScroll
           >
             <Nav.Link as={Link} to="/">Home</Nav.Link>
